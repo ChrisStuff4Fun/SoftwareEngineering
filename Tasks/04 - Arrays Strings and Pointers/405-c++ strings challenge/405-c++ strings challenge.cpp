@@ -20,7 +20,10 @@ int main()
     cout << input << endl;
 
     //Write solution here
-
+    
+    int charLoc = input.find("title=");
+    string newStr = input.substr(charLoc + 5);
+    cout << newStr;
 
 
     // Challenge 2 - word count
@@ -28,9 +31,18 @@ int main()
     getline(std::cin, input);   //Read a line (users types this in)
     istringstream iss(input);   //Create a string "stream" (sequence of words)
     string word;                //This will hold the next word
-    while (iss >> word) {       //Read the next word (if there is one)
-        cout << word << endl;   //Output each word in turn
+
+    int theSum = 0;
+
+    while (iss >> word) 
+    {                           
+        if (word == "the")
+        {
+            theSum += 1;
+        }
     }
+
+    cout << "There are " << theSum << " the's" << endl;
 
 }
 

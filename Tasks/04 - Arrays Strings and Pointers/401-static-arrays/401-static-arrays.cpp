@@ -43,12 +43,41 @@ int main()
     // **************************************************************************
 
     //Write task 1 solution here
-    int64_t sum = 0L;   //Result needs to be bigger than int to avoid overflow
+
+    int64_t sum = 0; //Result needs to be bigger than int to avoid overflow
+
+    for (unsigned int n = 0; n < N; n++) 
+    {
+        sum += nums[n];
+        cout << "Running total is " << sum << endl;
+    }
+
+
 
 
     // ***********************************************************************************************************************
     // TASK 2 - calculate the mean of all elements (this will be a fractional value) and display to 1 decimal place accuracy *
     // ***********************************************************************************************************************
+
+
+;
+    
+
+    long int sum2 = 0;
+
+    for (unsigned int n = 0; n < N; n++)
+    {
+        sum2 += nums[n]; // get total
+    }
+
+    float meanAvg = sum2 / N;
+    printf("The average is %4.2f", meanAvg);
+
+
+
+
+
+
 
     //Write task 2 solution here
 

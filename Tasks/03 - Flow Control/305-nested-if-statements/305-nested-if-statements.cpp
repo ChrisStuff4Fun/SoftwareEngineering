@@ -41,10 +41,16 @@ int main()
         else {
             cout << "very soon as it is low" << endl;
         }
+
     }
     else //Ok, it is > low, so do the following.....
     {
         cout << "Tank has sufficient fuel for now." << endl;
-        // If it is not full, let the user know they could still top it up.
+        
+        if (level != 100)
+        {
+            cout << "The tank can be filled as it is not full." << endl;
+        }
+
     }
 }

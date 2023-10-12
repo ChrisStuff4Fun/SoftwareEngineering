@@ -14,5 +14,6 @@ Currently there is only one course linked. Others may be added at a later stage.
 ---
 
 University of Plymouth
+Chris Catlin
 
 

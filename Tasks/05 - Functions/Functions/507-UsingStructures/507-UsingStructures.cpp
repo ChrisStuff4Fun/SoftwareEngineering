@@ -11,6 +11,7 @@ struct Point {
 //Function prototypes
 void displayPoint(Point p);
 float calculateLength(Point p);
+Point addPoint(Point p1, Point p2);
 Point flipPoint(Point p);
 
 
@@ -48,6 +49,11 @@ int main()
     Point p4 = flipPoint(p3);
     displayPoint(p4);               //Showing p4
 
+
+
+    Point newP = addPoint(p1, p2);
+    displayPoint(newP);
+
 }
 
 
@@ -65,6 +71,20 @@ float calculateLength(Point p)
 {
     float h = sqrt(p.x * p.x + p.y * p.y);
     return h;
+}
+
+
+Point addPoint(Point p1, Point p2)
+{
+    int newX = p1.x + p2.x;
+    int newY = p1.y + p2.y;
+
+    Point newP;
+    newP.x      = newX;
+    newP.y      = newY;
+    newP.length = calculateLength(newP);
+
+    return newP;
 }
 
 // Return a new structure with the the x and y coordinates swapped

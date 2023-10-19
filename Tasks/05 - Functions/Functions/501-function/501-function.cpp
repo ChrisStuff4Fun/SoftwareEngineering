@@ -3,29 +3,37 @@ using namespace std;
 
 int L;		//This is not an ideal location - we will soon address this
 
-int main()
-{
-	const string message = "Welcome to Computer Science";
-	
-	//Get the length of the string
-	L = message.length();
 
-	//Write the banner above
-	for (unsigned int n = 0; n < (L + 4); n++) {
+void drawLine(int length)
+{
+	for (unsigned int n = 0; n < (length + 4); n++) 
+	{
 		cout << "*";
 	}
 	cout << endl;
+}
+
+
+void displayBanner(string text)
+{
+	int strLength = text.length();
+
+	drawLine(strLength);
 
 	cout << "* ";				//Leading *
-	cout << message;			//Message
+	cout << text;		    	//Message
 	cout << " *" << endl;		//Trailing *
 
-	//Write the banner below
-	for (unsigned int n = 0; n < (L + 4); n++) {
-		cout << "*";
-	}
-	cout << endl;
+	drawLine(strLength);
+}
 
-	//Tell the calling shell all is well
+int main()
+{
+	const string message = "Welcome to Computer Science !!!";
+
+	displayBanner(message);
+
 	return 0;
 }
+
+ // Code covers tasks 01/03

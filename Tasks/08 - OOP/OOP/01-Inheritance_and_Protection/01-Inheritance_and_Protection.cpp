@@ -18,7 +18,7 @@ public:
     void setName(string newName) {
         //Update the name, but only if it has changed
         if (newName != _name) {
-            cout << "Names changed from << " << _name << " to " << _name << endl;
+            cout << "Names changed from << " << _name << " to " << newName << endl;
             _name = newName;
         }
     }
@@ -27,6 +27,23 @@ public:
         //Read only copy returned as = does a copy for string
         return _name;
     }
+
+    int getAge()
+    {
+        return _age;
+    }
+
+    void setAge(int newAge)
+    {
+        if ( (newAge >= 0) && (newAge <= 30) ) 
+        {
+            cout << "Age changed from " << _age << " to " << newAge << endl;
+            _age = newAge;
+        }
+    }
+
+        
+
 };
 
 
@@ -67,4 +84,8 @@ int main()
     Pet p1("Carrot", 2);
     Dog d1("Scrapper", 5);
     Cat c1("Furry", 3);
-}
+
+    p1.setAge(30);
+
+
+} 
